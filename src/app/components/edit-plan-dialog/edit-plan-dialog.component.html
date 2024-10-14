@@ -1,0 +1,19 @@
+<h2 mat-dialog-title>Edit Plan</h2>
+<mat-dialog-content>
+  <mat-form-field>
+    <mat-label>Zip Code</mat-label>
+    <input matInput [(ngModel)]="data.zipCode">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Commodity Type</mat-label>
+    <input matInput [(ngModel)]="data.commodityType">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Utility Provider</mat-label>
+    <input matInput [(ngModel)]="data.utilityProvider">
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="onCancel()">Cancel</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Save</button>
+</mat-dialog-actions>
